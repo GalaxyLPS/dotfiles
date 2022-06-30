@@ -565,9 +565,10 @@ client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
 
-awful.key({modkey, "Shift"}, "s", function()
-	awful.util.spawn("shutter -s")
-end)
+awful.keyboard.append_client_keybindings({
+	awful.key({modkey, "Shift"}, "s", function()
+	awful.spawn.with_shell("shutter -s")
+end)})
 
 awful.spawn.with_shell("nitrogen --head=1 --random --set-scaled ~/Wallpapers")
 awful.spawn.with_shell("picom")
