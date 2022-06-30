@@ -574,4 +574,4 @@ awful.spawn.with_shell("nitrogen --head=1 --random --set-scaled ~/Wallpapers")
 awful.spawn.with_shell("picom")
 
 beautiful.gap_single_client = true
-beautiful.useless_gap = 3
+beautiful.useless_gap = 2
